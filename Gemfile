@@ -41,3 +41,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gem para MongoBD
 gem 'mongoid'
+
+#Instalando gem Nokogiri para fazer parsing de HTML em Ruby
+gem 'nokogiri'
