@@ -2,6 +2,9 @@ class UpdateTagsJob
   include Sidekiq::Worker
 
   def perform
-    # Vou colocar aqui a job para atualização das quotes por tags
+    Tag.all.each do |tag|
+      crawler = QuoteCrawler.new(tag.name)
+      quotes = crawler.crawl
+    end
   end
 end
