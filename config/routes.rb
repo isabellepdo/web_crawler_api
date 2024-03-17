@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	# Rota para o método get_quotes_by_tag em Quotes_api
+	get '/api/quotes/:tag', to: 'quotes_api#get_quotes_by_tag'
 end
