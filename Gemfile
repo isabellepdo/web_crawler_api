@@ -44,3 +44,8 @@ gem 'mongoid'
 
 #Instalando gem Nokogiri para fazer parsing de HTML em Ruby
 gem 'nokogiri'
+
+#Instalando gem Sidekiq para agendamento de job
+gem 'sidekiq'
+gem 'sidekiq-cron'
+
