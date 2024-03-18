@@ -1,10 +1,10 @@
 class UpdateTagsJob
-  include Sidekiq::Worker
+	include Sidekiq::Worker
 
-  def perform
-    Tag.all.each do |tag|
-      crawler = QuoteCrawler.new(tag.name)
-      quotes = crawler.crawl
-    end
-  end
+	def perform
+		Tag.all.each do |tag|
+			crawler = QuoteCrawler.new(tag.name)
+			quotes = crawler.crawl
+		end
+	end
 end
