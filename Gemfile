@@ -42,10 +42,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gem para MongoBD
 gem 'mongoid'
 
-#Instalando gem Nokogiri para fazer parsing de HTML em Ruby
+# Gem Nokogiri para fazer parsing de HTML em Ruby
 gem 'nokogiri'
 
-#Instalando gem Sidekiq para agendamento de job
+# Gem Sidekiq para agendamento de job
 gem 'sidekiq'
 gem 'sidekiq-cron'
+
+# Gem JWT para token de autenticação
+gem 'jwt'
 
