@@ -43,13 +43,13 @@ Além disso, a API possui um job configurado para ser executado duas vezes ao di
 
 5. Acesse a API em `http://localhost:3000`.
 
-## Endpoints
-
-- **GET /quotes/{SEARCH_TAG}**: Retorna as frases relacionadas à tag especificada. Requer um token de acesso válido para autenticação.
-
 ## Autenticação
 
 A API utiliza um sistema de autenticação baseado em token. Para obter um token de acesso válido, faça uma solicitação GET para `/get_token`. O token será retornado na resposta da solicitação.
+
+## Endpoints
+
+- **GET /quotes/{SEARCH_TAG}**: Retorna as frases relacionadas à tag especificada. Requer um token de acesso válido para autenticação.
 
 ## Exemplo de Uso
 
