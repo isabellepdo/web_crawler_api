@@ -8,3 +8,10 @@ development:
         - localhost:27017
       options:
         server_selection_timeout: 1
+
+test:
+  clients:
+    default:
+      database: web_crawler_api_test
+      hosts:
+        - localhost:27017
