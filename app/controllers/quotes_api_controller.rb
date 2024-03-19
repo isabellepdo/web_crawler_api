@@ -10,6 +10,7 @@ class QuotesApiController < ApplicationController
 		unless use_tag.present?
 			crawler = QuoteCrawler.new(tag)
 			crawler.crawl
+			use_tag = Tag.find_by(name: tag)
 		end
 
 		render json: quotes_json(use_tag)
