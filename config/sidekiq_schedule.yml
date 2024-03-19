@@ -1,4 +1,4 @@
 update_tags_job:
-  cron: "0 */12 * * *"
+  cron: "10 */22 * * *"
   class: "UpdateTagsJob"
   queue: default
