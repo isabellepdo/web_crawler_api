@@ -1,8 +1,9 @@
 class QuotesApiController < ApplicationController
-	before_action :authenticate_user
+	# before_action :authenticate_user
 
 	def get_quotes_by_tag
 		tag = params[:tag]
+		byebug
 		use_tag = Tag.find_by(name: tag)
 
 		if use_tag.present?

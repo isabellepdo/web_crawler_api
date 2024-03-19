@@ -1,6 +1,6 @@
 class AuthService
-	def self.generate_token(user_id)
-		JWT.encode({ user_id: user_id }, Rails.application.secrets.secret_key_base)
+	def self.generate_token()
+		JWT.encode({ user_id: rand(1..10) }, Rails.application.secrets.secret_key_base)
 	end
 
 	def self.decode_token(token)

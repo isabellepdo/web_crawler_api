@@ -1,4 +1,6 @@
 development:
+  options:
+    raise_not_found_error: false
   clients:
     default:
       database: web_crawler_api_development
