@@ -25,10 +25,8 @@ class QuoteCrawler
 					quote.save
 
 					tag = Tag.find_or_create_by(name: @tag)
-					quote.tags << tag
 				end
 
-				quotes << quote
 			rescue StandardError => e
 				puts "Erro ao salvar citação: #{e.message}"
 			end

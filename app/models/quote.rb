@@ -7,4 +7,8 @@ class Quote
 	field :author_about, type: String
 	
 	has_and_belongs_to_many :tags
+
+	def as_json(options = {})
+    super(options.merge(include: { tags: { only: :name } }))
+  end
 end
