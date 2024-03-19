@@ -39,16 +39,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Gem para MongoBD
+# Gem for MongoBD
 gem 'mongoid'
 
-# Gem Nokogiri para fazer parsing de HTML em Ruby
+# Nokogiri Gem for parsing HTML in Ruby
 gem 'nokogiri'
 
-# Gem Sidekiq para agendamento de job
+# Gem Sidekiq for job scheduling
 gem 'sidekiq'
 gem 'sidekiq-cron'
 
-# Gem JWT para token de autenticação
+# Gem JWT for authentication token
 gem 'jwt'
 
