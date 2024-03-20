@@ -6,13 +6,13 @@ class QuotesApiController < ApplicationController
 	def get_quotes_by_tag
 		tag = params[:tag]
 		use_tag = Tag.find_by(name: tag)
-
+		
 		unless use_tag.present?
 			crawler = QuoteCrawler.new(tag)
 			crawler.crawl
 			use_tag = Tag.find_by(name: tag)
 		end
-
+	
 		render json: quotes_json(use_tag)
 	end
 
@@ -32,12 +32,4 @@ class QuotesApiController < ApplicationController
 		json_quotes.to_json
 	end
 
-	def authenticate_user
-		token = request.headers['Authorization']&.split(' ')&.last
-		decoded_token = AuthService.decode_token(token)
-
-		unless decoded_token
-			render json: { error: 'Token inválido' }, status: :unauthorized
-		end
-	end
 end
