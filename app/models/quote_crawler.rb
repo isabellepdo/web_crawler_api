@@ -18,12 +18,7 @@ class QuoteCrawler
 			tags = quote_node.css('.tags .tag').map(&:text).map(&:strip)
 
 			begin
-				quote = Quote.find_or_initialize_by(quote: quote_text, author: author_name, author_about: author_about_link)
-
-				if quote.new_record? 
-					quote.save
-				end
-
+				quote = Quote.find_or_create_by(quote: quote_text, author: author_name, author_about: author_about_link)
 				tag = Tag.find_or_create_by(name: @tag)
 				quote.tags << tag unless quote.tags.include?(tag)
 

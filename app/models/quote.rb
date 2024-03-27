@@ -9,6 +9,6 @@ class Quote
 	has_and_belongs_to_many :tags
 
 	def as_json(options = {})
-    super(options.merge(include: { tags: { only: :name } }))
-  end
+		super(options.merge(include: { tags: { only: :name } }))
+	end
 end
